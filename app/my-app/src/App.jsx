@@ -7,11 +7,8 @@ import MapLayout from './MapLayout'
 
 
 function App() {
-
-
+  
   const [selectedEemiGrade, setSelectedEemiGrade] = useState(0);
-  const evaluations = ["gw", "twrio", "twgeb"];
-
 
   const DropdownElem = ({ label, options, onChange }) => {
     return (
@@ -33,13 +30,13 @@ function App() {
     <div>
       <div>
         <div>
-        <DropdownElem id="dropdown-style" label={"Select EEMI Grade"}
-        options = {[
-          { value: "gw", label: "gw" },
-          { value: "twrio", label: "twrio" },
-          { value: "twgeb", label: "twgeb" }
-        ]}
-        onChange={setSelectedEemiGrade} /></div>
+          <DropdownElem id="dropdown-style" label={"Select EEMI Grade"}
+            options={[
+              { value: "gw", label: "gw" },
+              { value: "twrio", label: "twrio" },
+              { value: "twgeb", label: "twgeb" }
+            ]}
+            onChange={setSelectedEemiGrade} /></div>
       </div>
       <MapLayout id="map-layout" selectedEemiGrade={selectedEemiGrade} />
     </div>
