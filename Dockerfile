@@ -34,4 +34,6 @@ COPY db.json /app/db.json
 
 EXPOSE 5000
 
-CMD ["npx", "json-server", "--host", "0.0.0.0", "/app/db.json", "--port", "5000"]
+CMD ["npm", "start"]
+
+# CMD ["npx", "json-server", "--host", "0.0.0.0", "/app/db.json", "--port", "5000"]
